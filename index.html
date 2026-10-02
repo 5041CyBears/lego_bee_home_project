@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#112633">
-  <title>Room Conditions</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="config.js" defer></script>
-  <script src="app.js" defer></script>
+  <meta name="theme-color" content="#8d2b21">
+  <title>Bee Home Prototype</title>
+  <link rel="stylesheet" href="style.css?v=bee-home-2">
+  <script src="config.js?v=bee-home-2" defer></script>
+  <script src="app.js?v=bee-home-2" defer></script>
 </head>
 <body>
   <main class="shell">
     <header class="page-header">
       <div>
-        <p class="eyebrow">ESP32 · DHT11</p>
-        <h1>Room Conditions</h1>
-        <p class="intro">Temperature and humidity from the sensor.</p>
+        <p class="eyebrow">Live habitat readings · ESP32 + DHT11</p>
+        <h1>Bee Home <span>Prototype</span></h1>
+        <p class="intro">Temperature in Fahrenheit and relative humidity from the bee home sensor.</p>
       </div>
       <div class="status-wrap">
         <span id="status" class="status" role="status" aria-live="polite">Connecting…</span>
@@ -25,14 +25,14 @@
 
     <section class="readings" aria-label="Latest readings">
       <article class="reading temperature">
-        <div class="reading-top"><span>Temperature</span><span aria-hidden="true">°C</span></div>
-        <div class="reading-number"><span id="temperature">--</span><span class="unit">°C</span></div>
-        <p id="fahrenheit" class="secondary">-- °F</p>
+        <div class="reading-top"><span>Temperature</span><span aria-hidden="true">Fahrenheit</span></div>
+        <div class="reading-number"><span id="temperature">--</span><span class="unit">°F</span></div>
+        <p class="secondary">Inside the bee home</p>
       </article>
       <article class="reading humidity">
         <div class="reading-top"><span>Relative humidity</span><span aria-hidden="true">%</span></div>
         <div class="reading-number"><span id="humidity">--</span><span class="unit">%</span></div>
-        <p class="secondary">Water vapor in the air</p>
+        <p class="secondary">Moisture in the air</p>
       </article>
     </section>
 
@@ -43,16 +43,17 @@
       <h2>Recent readings</h2>
       <div class="charts">
         <article class="chart-card">
-          <h3>Temperature · °C</h3>
-          <iframe id="temperature-chart" title="Temperature history in degrees Celsius" loading="lazy"></iframe>
+          <h3>Temperature history · °F</h3>
+          <iframe id="temperature-chart" title="Temperature history in degrees Fahrenheit" loading="lazy"></iframe>
         </article>
         <article class="chart-card">
-          <h3>Humidity · %</h3>
+          <h3>Humidity history · %</h3>
           <iframe id="humidity-chart" title="Humidity history in percent" loading="lazy"></iframe>
         </article>
       </div>
     </section>
-    <footer>Readings update about every 20 seconds when the ESP32 is online.</footer>
+
+    <footer>Bee Home Prototype · Readings update about every 20 seconds when the ESP32 is online.</footer>
   </main>
 </body>
 </html>
